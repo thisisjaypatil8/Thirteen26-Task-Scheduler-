@@ -41,5 +41,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter)
-Project Link: [https://github.com/yourusername/gemini-scheduler](https://github.com/yourusername/gemini-scheduler)
+# Developed by  [Jay Patil](https://github.com/thisisjaypatil8)
+
+### Project Link: [Thirteen26](https://github.com/thisisjaypatil8/Thirteen26-Task-Scheduler-)
