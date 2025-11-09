@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/utils/icsExporter.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1762692037477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1762692037477,
+            "name": "Commit-0",
+            "content": "export const exportToICS = (schedule) => {\r\n    if (!schedule || schedule.length === 0) {\r\n        alert('First, generate a schedule to export.');\r\n        return;\r\n    }\r\n\r\n    let icsContent = [\r\n        \"BEGIN:VCALENDAR\",\r\n        \"VERSION:2.0\",\r\n        \"PRODID:-//GeminiScheduler//EN\",\r\n    ];\r\n\r\n    const today = new Date();\r\n    const y = today.getFullYear();\r\n    const m = String(today.getMonth() + 1).padStart(2, '0');\r\n    const d = String(today.getDate()).padStart(2, '0');\r\n\r\n    schedule.forEach(item => {\r\n        const [startH, startM] = item.startTime.split(':');\r\n        const [endH, endM] = item.endTime.split(':');\r\n        const dtstart = `${y}${m}${d}T${startH}${startM}00`;\r\n        const dtend = `${y}${m}${d}T${endH}${endM}00`;\r\n        const uid = `${dtstart}-${Math.random().toString(36).substr(2, 9)}@geminischeduler`;\r\n\r\n        icsContent.push(\r\n            \"BEGIN:VEVENT\",\r\n            `UID:${uid}`,\r\n            `DTSTAMP:${dtstart}`,\r\n            `DTSTART:${dtstart}`,\r\n            `DTEND:${dtend}`,\r\n            `SUMMARY:${item.task}`,\r\n            `DESCRIPTION:Priority: ${item.priority}`,\r\n            \"END:VEVENT\"\r\n        );\r\n    });\r\n\r\n    icsContent.push(\"END:VCALENDAR\");\r\n\r\n    const blob = new Blob([icsContent.join('\\r\\n')], { type: 'text/calendar;charset=utf-8' });\r\n    const link = document.createElement('a');\r\n    link.href = URL.createObjectURL(blob);\r\n    link.setAttribute('download', 'my-schedule.ics');\r\n    document.body.appendChild(link);\r\n    link.click();\r\n    document.body.removeChild(link);\r\n};"
+        }
+    ]
+}

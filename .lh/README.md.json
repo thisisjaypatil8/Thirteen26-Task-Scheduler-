@@ -1,0 +1,22 @@
+{
+    "sourceFile": "README.md",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1762701131800,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1762701170679,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,45 @@\n+# Gemini Scheduler\n+\n+A scheduling application built with modern technologies.\n+\n+## Description\n+\n+This project is a scheduler application designed to help manage appointments, meetings, and other time-based events efficiently.\n+\n+## Features\n+\n+- Event scheduling and management\n+- Calendar integration\n+- User-friendly interface\n+- Real-time updates\n+\n+## Installation\n+\n+```bash\n+git clone https://github.com/yourusername/gemini-scheduler.git\n+cd gemini-scheduler\n+npm install\n+```\n+\n+## Usage\n+\n+```bash\n+npm start\n+```\n+\n+## Contributing\n+\n+1. Fork the repository\n+2. Create your feature branch (`git checkout -b feature/amazing-feature`)\n+3. Commit your changes (`git commit -m 'Add some amazing feature'`)\n+4. Push to the branch (`git push origin feature/amazing-feature`)\n+5. Open a Pull Request\n+\n+## License\n+\n+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.\n+\n+## Contact\n+\n+Your Name - [@yourtwitter](https://twitter.com/yourtwitter)\n+Project Link: [https://github.com/yourusername/gemini-scheduler](https://github.com/yourusername/gemini-scheduler)\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1762701131800,
+            "name": "Commit-0",
+            "content": ""
+        }
+    ]
+}

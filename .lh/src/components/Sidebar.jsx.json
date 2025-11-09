@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/components/Sidebar.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1762696446146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1762697088138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n import React from 'react';\r\n import ProgressTracker from './ProgressTracker.jsx';\r\n import Tips from './Tips.jsx';\r\n \r\n-function Sidebar({ totalTasks, completedCount }) {\r\n+function Sidebar({ totalTasks, completedCount, aiTips, isTipsLoading }) {\r\n   return (\r\n     // The space-y-8 gives vertical spacing between the widgets\r\n     <>\r\n       <ProgressTracker total={totalTasks} completed={completedCount} />\r\n-      <Tips />\r\n+      <Tips aiTips={aiTips} isLoading={isTipsLoading} />\r\n     </>\r\n   );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1762697690210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,16 @@\n import React from 'react';\r\n import ProgressTracker from './ProgressTracker.jsx';\r\n import Tips from './Tips.jsx';\r\n \r\n-function Sidebar({ totalTasks, completedCount, aiTips, isTipsLoading }) {\r\n+function Sidebar({ totalTasks, completedCount, schedule, apiKey }) {\r\n   return (\r\n     // The space-y-8 gives vertical spacing between the widgets\r\n     <>\r\n       <ProgressTracker total={totalTasks} completed={completedCount} />\r\n-      <Tips aiTips={aiTips} isLoading={isTipsLoading} />\r\n+      \r\n+      {/* Pass the schedule and key to the Tips component */}\r\n+      <Tips schedule={schedule} apiKey={apiKey} />\r\n     </>\r\n   );\r\n }\r\n \r\n"
+                }
+            ],
+            "date": 1762696446146,
+            "name": "Commit-0",
+            "content": "import React from 'react';\r\nimport ProgressTracker from './ProgressTracker.jsx';\r\nimport Tips from './Tips.jsx';\r\n\r\nfunction Sidebar({ totalTasks, completedCount }) {\r\n  return (\r\n    // The space-y-8 gives vertical spacing between the widgets\r\n    <>\r\n      <ProgressTracker total={totalTasks} completed={completedCount} />\r\n      <Tips />\r\n    </>\r\n  );\r\n}\r\n\r\nexport default Sidebar;"
+        }
+    ]
+}

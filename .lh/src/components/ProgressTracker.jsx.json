@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/ProgressTracker.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1762696374617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1762696374617,
+            "name": "Commit-0",
+            "content": "import React from 'react';\r\n\r\nfunction ProgressTracker({ total, completed }) {\r\n  // Prevent divide by zero if no tasks are scheduled\r\n  const percentage = total > 0 ? (completed / total) * 100 : 0;\r\n  const isAllDone = total > 0 && percentage === 100;\r\n\r\n  return (\r\n    <div className=\"bg-white p-6 rounded-xl shadow-lg\">\r\n      <h3 className=\"text-2xl font-semibold mb-4 text-gray-700\">Daily Progress</h3>\r\n      \r\n      {total === 0 ? (\r\n        <p className=\"text-gray-500\">Generate a schedule to see your progress.</p>\r\n      ) : (\r\n        <>\r\n          <div className=\"flex justify-between items-center mb-2\">\r\n            <span className=\"text-lg font-medium text-gray-800\">\r\n              {isAllDone ? \"All tasks done! 🎉\" : \"Tasks Completed\"}\r\n            </span>\r\n            <span className=\"text-lg font-bold text-blue-600\">\r\n              {completed} / {total}\r\n            </span>\r\n          </div>\r\n          \r\n          {/* The progress bar */}\r\n          <div className=\"w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner\">\r\n            <div\r\n              className={`h-4 rounded-full transition-all duration-500 ${isAllDone ? 'bg-green-500' : 'bg-blue-600'}`}\r\n              style={{ width: `${percentage}%` }}\r\n            ></div>\r\n          </div>\r\n        </>\r\n      )}\r\n    </div>\r\n  );\r\n}\r\n\r\nexport default ProgressTracker;"
+        }
+    ]
+}

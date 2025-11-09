@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/utils/timeUtils.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1762692046063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1762692046063,
+            "name": "Commit-0",
+            "content": "/**\r\n * Parses a \"HH:MM\" string into a Date object for today.\r\n */\r\nexport const parseTime = (timeString) => {\r\n    const [hours, minutes] = timeString.split(':').map(Number);\r\n    const date = new Date();\r\n    date.setHours(hours, minutes, 0, 0); // set hours, minutes, seconds, ms\r\n    return date;\r\n};\r\n\r\n/**\r\n * Formats milliseconds into a \"Xh Ym\" or \"Ym Zs\" string.\r\n */\r\nexport const formatTimeRemaining = (ms) => {\r\n    if (ms < 0) ms = 0;\r\n\r\n    let seconds = Math.floor(ms / 1000);\r\n    let minutes = Math.floor(seconds / 60);\r\n    let hours = Math.floor(minutes / 60);\r\n\r\n    seconds = seconds % 60;\r\n    minutes = minutes % 60;\r\n\r\n    if (hours > 0) {\r\n        return `${hours}h ${minutes}m left`;\r\n    }\r\n    if (minutes > 0) {\r\n        return `${minutes}m ${seconds}s left`;\r\n    }\r\n    return `${seconds}s left`;\r\n};"
+        }
+    ]
+}

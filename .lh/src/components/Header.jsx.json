@@ -1,0 +1,86 @@
+{
+    "sourceFile": "src/components/Header.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 17,
+            "patches": [
+                {
+                    "date": 1762692054844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1762696463359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,30 @@\n import React from 'react';\r\n \r\n-function Header() {\r\n+// The Header now accepts a prop: onSettingsClick\r\n+// This lets the parent (App.jsx) tell it what to do when Settings is clicked\r\n+function Header({ onSettingsClick }) { \r\n   return (\r\n-    <header className=\"text-center my-8\">\r\n-      <h1 className=\"text-4xl font-bold text-gray-800\">Gemini Smart Scheduler 🤖</h1>\r\n-      <p className=\"text-gray-600\">Let AI organize your day.</p>\r\n+    <header className=\"bg-white shadow-md p-4 flex justify-between items-center w-full\">\r\n+      \r\n+      {/* App Title */}\r\n+      <div className=\"flex items-center space-x-3\">\r\n+        <span className=\"text-2xl\">🤖</span>\r\n+        <h1 className=\"text-2xl font-bold text-gray-800 hidden sm:block\">\r\n+          Gemini Smart Scheduler\r\n+        </h1>\r\n+        <h1 className=\"text-xl font-bold text-gray-800 sm:hidden\">\r\n+          Scheduler\r\n+        </h1>\r\n+      </div>\r\n+\r\n+      {/* Settings Button */}\r\n+      <button\r\n+        onClick={onSettingsClick}\r\n+        className=\"bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg shadow\"\r\n+      >\r\n+        Settings\r\n+      </button>\r\n     </header>\r\n   );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1762698790239,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n // The Header now accepts a prop: onSettingsClick\r\n // This lets the parent (App.jsx) tell it what to do when Settings is clicked\r\n function Header({ onSettingsClick }) { \r\n   return (\r\n-    <header className=\"bg-white shadow-md p-4 flex justify-between items-center w-full\">\r\n+    <header className=\" bg-white shadow-md p-4 flex justify-between items-center w-full\">\r\n       \r\n       {/* App Title */}\r\n       <div className=\"flex items-center space-x-3\">\r\n         <span className=\"text-2xl\">🤖</span>\r\n"
+                },
+                {
+                    "date": 1762698795362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n // The Header now accepts a prop: onSettingsClick\r\n // This lets the parent (App.jsx) tell it what to do when Settings is clicked\r\n function Header({ onSettingsClick }) { \r\n   return (\r\n-    <header className=\" bg-white shadow-md p-4 flex justify-between items-center w-full\">\r\n+    <header className=\" lbg-white shadow-md p-4 flex justify-between items-center w-full\">\r\n       \r\n       {/* App Title */}\r\n       <div className=\"flex items-center space-x-3\">\r\n         <span className=\"text-2xl\">🤖</span>\r\n"
+                },
+                {
+                    "date": 1762698800567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n // The Header now accepts a prop: onSettingsClick\r\n // This lets the parent (App.jsx) tell it what to do when Settings is clicked\r\n function Header({ onSettingsClick }) { \r\n   return (\r\n-    <header className=\" lbg-white shadow-md p-4 flex justify-between items-center w-full\">\r\n+    <header className=\" lg:bg-white shadow-md p-4 flex justify-between items-center w-full\">\r\n       \r\n       {/* App Title */}\r\n       <div className=\"flex items-center space-x-3\">\r\n         <span className=\"text-2xl\">🤖</span>\r\n"
+                },
+                {
+                    "date": 1762698806784,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n // The Header now accepts a prop: onSettingsClick\r\n // This lets the parent (App.jsx) tell it what to do when Settings is clicked\r\n function Header({ onSettingsClick }) { \r\n   return (\r\n-    <header className=\" lg:bg-white shadow-md p-4 flex justify-between items-center w-full\">\r\n+    <header className=\"lg:sticky lg:top-0 bg-white shadow-md p-4 flex justify-between items-center w-full\">\r\n       \r\n       {/* App Title */}\r\n       <div className=\"flex items-center space-x-3\">\r\n         <span className=\"text-2xl\">🤖</span>\r\n"
+                },
+                {
+                    "date": 1762699448081,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,13 @@\n import React from 'react';\r\n \r\n-// The Header now accepts a prop: onSettingsClick\r\n-// This lets the parent (App.jsx) tell it what to do when Settings is clicked\r\n function Header({ onSettingsClick }) { \r\n   return (\r\n-    <header className=\"lg:sticky lg:top-0 bg-white shadow-md p-4 flex justify-between items-center w-full\">\r\n+    <header \r\n+      className=\"bg-white shadow-md px-4 flex justify-between items-center w-full sticky top-0 z-50 h-16\"\r\n+      // We changed p-4 to px-4 and added:\r\n+      // sticky top-0 z-50 h-16\r\n+    >\r\n       \r\n       {/* App Title */}\r\n       <div className=\"flex items-center space-x-3\">\r\n         <span className=\"text-2xl\">🤖</span>\r\n"
+                },
+                {
+                    "date": 1762699552154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     >\r\n       \r\n       {/* App Title */}\r\n       <div className=\"flex items-center space-x-3\">\r\n-        <span className=\"text-2xl\">🤖</span>\r\n+        <span className=\"text-2xl\"></span>\r\n         <h1 className=\"text-2xl font-bold text-gray-800 hidden sm:block\">\r\n           Gemini Smart Scheduler\r\n         </h1>\r\n         <h1 className=\"text-xl font-bold text-gray-800 sm:hidden\">\r\n"
+                },
+                {
+                    "date": 1762699566661,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n       {/* App Title */}\r\n       <div className=\"flex items-center space-x-3\">\r\n         <span className=\"text-2xl\"></span>\r\n         <h1 className=\"text-2xl font-bold text-gray-800 hidden sm:block\">\r\n-          Gemini Smart Scheduler\r\n+           Smart Scheduler\r\n         </h1>\r\n         <h1 className=\"text-xl font-bold text-gray-800 sm:hidden\">\r\n           Scheduler\r\n         </h1>\r\n"
+                },
+                {
+                    "date": 1762699571768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n       {/* App Title */}\r\n       <div className=\"flex items-center space-x-3\">\r\n         <span className=\"text-2xl\"></span>\r\n         <h1 className=\"text-2xl font-bold text-gray-800 hidden sm:block\">\r\n-           Smart Scheduler\r\n+          Thirt Smart Scheduler\r\n         </h1>\r\n         <h1 className=\"text-xl font-bold text-gray-800 sm:hidden\">\r\n           Scheduler\r\n         </h1>\r\n"
+                },
+                {
+                    "date": 1762699581091,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n       {/* App Title */}\r\n       <div className=\"flex items-center space-x-3\">\r\n         <span className=\"text-2xl\"></span>\r\n         <h1 className=\"text-2xl font-bold text-gray-800 hidden sm:block\">\r\n-          Thirt Smart Scheduler\r\n+          Thirteen2: Smart Scheduler\r\n         </h1>\r\n         <h1 className=\"text-xl font-bold text-gray-800 sm:hidden\">\r\n           Scheduler\r\n         </h1>\r\n"
+                },
+                {
+                    "date": 1762699589453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n       {/* App Title */}\r\n       <div className=\"flex items-center space-x-3\">\r\n         <span className=\"text-2xl\"></span>\r\n         <h1 className=\"text-2xl font-bold text-gray-800 hidden sm:block\">\r\n-          Thirteen2: Smart Scheduler\r\n+          Thirteen26 Smart Scheduler\r\n         </h1>\r\n         <h1 className=\"text-xl font-bold text-gray-800 sm:hidden\">\r\n           Scheduler\r\n         </h1>\r\n"
+                },
+                {
+                    "date": 1762699596273,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n       {/* App Title */}\r\n       <div className=\"flex items-center space-x-3\">\r\n         <span className=\"text-2xl\"></span>\r\n         <h1 className=\"text-2xl font-bold text-gray-800 hidden sm:block\">\r\n-          Thirteen26 Smart Scheduler\r\n+          Thirteen26 | Smart Scheduler\r\n         </h1>\r\n         <h1 className=\"text-xl font-bold text-gray-800 sm:hidden\">\r\n           Scheduler\r\n         </h1>\r\n"
+                },
+                {
+                    "date": 1762700444646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     >\r\n       \r\n       {/* App Title */}\r\n       <div className=\"flex items-center space-x-3\">\r\n-        <span className=\"text-2xl\"></span>\r\n+        <span className=\"text-2xl\">i</span>\r\n         <h1 className=\"text-2xl font-bold text-gray-800 hidden sm:block\">\r\n           Thirteen26 | Smart Scheduler\r\n         </h1>\r\n         <h1 className=\"text-xl font-bold text-gray-800 sm:hidden\">\r\n"
+                },
+                {
+                    "date": 1762700451095,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     >\r\n       \r\n       {/* App Title */}\r\n       <div className=\"flex items-center space-x-3\">\r\n-        <span className=\"text-2xl\">i</span>\r\n+        <span className=\"text-2xl\"><im</span>\r\n         <h1 className=\"text-2xl font-bold text-gray-800 hidden sm:block\">\r\n           Thirteen26 | Smart Scheduler\r\n         </h1>\r\n         <h1 className=\"text-xl font-bold text-gray-800 sm:hidden\">\r\n"
+                },
+                {
+                    "date": 1762700457694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     >\r\n       \r\n       {/* App Title */}\r\n       <div className=\"flex items-center space-x-3\">\r\n-        <span className=\"text-2xl\"><im</span>\r\n+        <span className=\"text-2xl\"><ima</span>\r\n         <h1 className=\"text-2xl font-bold text-gray-800 hidden sm:block\">\r\n           Thirteen26 | Smart Scheduler\r\n         </h1>\r\n         <h1 className=\"text-xl font-bold text-gray-800 sm:hidden\">\r\n"
+                },
+                {
+                    "date": 1762700511684,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     >\r\n       \r\n       {/* App Title */}\r\n       <div className=\"flex items-center space-x-3\">\r\n-        <span className=\"text-2xl\"><ima</span>\r\n+        <span className=\"text-2xl\"><img src=\"/favicon.\" alt=\"Logo\" className=\"w-8 h-8\" /></span>\r\n         <h1 className=\"text-2xl font-bold text-gray-800 hidden sm:block\">\r\n           Thirteen26 | Smart Scheduler\r\n         </h1>\r\n         <h1 className=\"text-xl font-bold text-gray-800 sm:hidden\">\r\n"
+                },
+                {
+                    "date": 1762700518441,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     >\r\n       \r\n       {/* App Title */}\r\n       <div className=\"flex items-center space-x-3\">\r\n-        <span className=\"text-2xl\"><img src=\"/favicon.\" alt=\"Logo\" className=\"w-8 h-8\" /></span>\r\n+        <span className=\"text-2xl\"><img src=\"/logo.\" alt=\"Logo\" className=\"w-8 h-8\" /></span>\r\n         <h1 className=\"text-2xl font-bold text-gray-800 hidden sm:block\">\r\n           Thirteen26 | Smart Scheduler\r\n         </h1>\r\n         <h1 className=\"text-xl font-bold text-gray-800 sm:hidden\">\r\n"
+                }
+            ],
+            "date": 1762692054844,
+            "name": "Commit-0",
+            "content": "import React from 'react';\r\n\r\nfunction Header() {\r\n  return (\r\n    <header className=\"text-center my-8\">\r\n      <h1 className=\"text-4xl font-bold text-gray-800\">Gemini Smart Scheduler 🤖</h1>\r\n      <p className=\"text-gray-600\">Let AI organize your day.</p>\r\n    </header>\r\n  );\r\n}\r\n\r\nexport default Header;"
+        }
+    ]
+}

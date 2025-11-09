@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/TaskForm.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1762692077690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1762692077690,
+            "name": "Commit-0",
+            "content": "import React from 'react';\r\n\r\nfunction TaskForm({ taskInput, setTaskInput, onSubmit, isLoading }) {\r\n  return (\r\n    <div className=\"bg-white p-6 rounded-xl shadow-lg mb-8\">\r\n      <h2 className=\"text-2xl font-semibold mb-4 text-gray-700\">What's on your plate today?</h2>\r\n      <textarea\r\n        className=\"w-full h-32 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500\"\r\n        placeholder=\"e.g.&#10;- Write team report&#10;- Dentist at 3pm for 1 hour&#10;- Call mom\"\r\n        value={taskInput}\r\n        onChange={(e) => setTaskInput(e.target.value)}\r\n      />\r\n      <button\r\n        className=\"mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 ease-in-out disabled:bg-gray-400\"\r\n        onClick={onSubmit}\r\n        disabled={isLoading}\r\n      >\r\n        {isLoading ? '🧠 Thinking...' : '✨ Generate Schedule'}\r\n      </button>\r\n    </div>\r\n  );\r\n}\r\n\r\nexport default TaskForm;"
+        }
+    ]
+}

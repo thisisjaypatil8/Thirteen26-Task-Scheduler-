@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/SettingsModal.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1762692066385,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1762692066385,
+            "name": "Commit-0",
+            "content": "import React from 'react';\r\n\r\nfunction SettingsModal({ show, onClose, apiKey, setApiKey, onSave }) {\r\n  if (!show) return null;\r\n\r\n  return (\r\n    <div className=\"fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center\">\r\n      <div className=\"bg-white p-8 rounded-lg shadow-2xl w-full max-w-md\">\r\n        <h2 className=\"text-2xl font-semibold mb-4\">Settings</h2>\r\n        <p className=\"text-gray-600 mb-2\">Please enter your Google Gemini API Key.</p>\r\n        <input\r\n          type=\"password\"\r\n          className=\"w-full p-2 border border-gray-300 rounded-lg mb-4\"\r\n          placeholder=\"Enter your API Key\"\r\n          value={apiKey}\r\n          onChange={(e) => setApiKey(e.target.value)}\r\n        />\r\n        <button\r\n          className=\"bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg\"\r\n          onClick={onSave}\r\n        >\r\n          Save\r\n        </button>\r\n        <button\r\n          className=\"ml-2 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-lg\"\r\n          onClick={onClose}\r\n        >\r\n          Close\r\n        </button>\r\n      </div>\r\n    </div>\r\n  );\r\n}\r\n\r\nexport default SettingsModal;"
+        }
+    ]
+}

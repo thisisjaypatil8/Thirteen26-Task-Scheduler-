@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/Loading.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1762692087245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1762692087245,
+            "name": "Commit-0",
+            "content": "import React from 'react';\r\n\r\nfunction Loading() {\r\n  return (\r\n    <div className=\"text-center p-8\">\r\n      <p className=\"text-gray-600 text-lg\">🧠 Gemini is thinking... this may take a moment.</p>\r\n    </div>\r\n  );\r\n}\r\n\r\nexport default Loading;"
+        }
+    ]
+}

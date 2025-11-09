@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/Error.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1762692096045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1762692096045,
+            "name": "Commit-0",
+            "content": "import React from 'react';\r\n\r\nfunction Error({ message }) {\r\n  if (!message) return null;\r\n  return (\r\n    <div className=\"text-center p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg\">\r\n      <p className=\"font-bold\">An Error Occurred</p>\r\n      <p className=\"text-sm\">{message}</p>\r\n    </div>\r\n  );\r\n}\r\n\r\nexport default Error;"
+        }
+    ]
+}
