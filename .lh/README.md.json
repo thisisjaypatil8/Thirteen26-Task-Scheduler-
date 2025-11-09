@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 21,
             "patches": [
                 {
                     "date": 1762701131800,
@@ -12,6 +12,86 @@
                 {
                     "date": 1762701170679,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,45 @@\n+# Gemini Scheduler\n+\n+A scheduling application built with modern technologies.\n+\n+## Description\n+\n+This project is a scheduler application designed to help manage appointments, meetings, and other time-based events efficiently.\n+\n+## Features\n+\n+- Event scheduling and management\n+- Calendar integration\n+- User-friendly interface\n+- Real-time updates\n+\n+## Installation\n+\n+```bash\n+git clone https://github.com/yourusername/gemini-scheduler.git\n+cd gemini-scheduler\n+npm install\n+```\n+\n+## Usage\n+\n+```bash\n+npm start\n+```\n+\n+## Contributing\n+\n+1. Fork the repository\n+2. Create your feature branch (`git checkout -b feature/amazing-feature`)\n+3. Commit your changes (`git commit -m 'Add some amazing feature'`)\n+4. Push to the branch (`git push origin feature/amazing-feature`)\n+5. Open a Pull Request\n+\n+## License\n+\n+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.\n+\n+## Contact\n+\n+Your Name - [@yourtwitter](https://twitter.com/yourtwitter)\n+Project Link: [https://github.com/yourusername/gemini-scheduler](https://github.com/yourusername/gemini-scheduler)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762701924330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,6 +40,6 @@\n This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.\n \n ## Contact\n \n-Your Name - [@yourtwitter](https://twitter.com/yourtwitter)\n+ - [@yourtwitter](https://twitter.com/yourtwitter)\n Project Link: [https://github.com/yourusername/gemini-scheduler](https://github.com/yourusername/gemini-scheduler)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762701953940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,6 +40,6 @@\n This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.\n \n ## Contact\n \n- - [@yourtwitter](https://twitter.com/yourtwitter)\n+Jay Patil - [@]yourtwitter(https://twitter.com/yourtwitter)\n Project Link: [https://github.com/yourusername/gemini-scheduler](https://github.com/yourusername/gemini-scheduler)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762701959299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,6 +40,6 @@\n This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.\n \n ## Contact\n \n-Jay Patil - [@]yourtwitter(https://twitter.com/yourtwitter)\n+Jay Patil - [Jay Patil](https://twitter.com/yourtwitter)\n Project Link: [https://github.com/yourusername/gemini-scheduler](https://github.com/yourusername/gemini-scheduler)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762701965113,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,6 +40,6 @@\n This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.\n \n ## Contact\n \n-Jay Patil - [Jay Patil](https://twitter.com/yourtwitter)\n+ [Jay Patil](https://twitter.com/yourtwitter)\n Project Link: [https://github.com/yourusername/gemini-scheduler](https://github.com/yourusername/gemini-scheduler)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762701988633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,6 +40,6 @@\n This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.\n \n ## Contact\n \n- [Jay Patil](https://twitter.com/yourtwitter)\n+- [Jay Patil](https://github.com/thisisjaypatil8)\n Project Link: [https://github.com/yourusername/gemini-scheduler](https://github.com/yourusername/gemini-scheduler)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762701998868,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,5 +41,6 @@\n \n ## Contact\n \n - [Jay Patil](https://github.com/thisisjaypatil8)\n+\n Project Link: [https://github.com/yourusername/gemini-scheduler](https://github.com/yourusername/gemini-scheduler)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762702009546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,7 +40,7 @@\n This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.\n \n ## Contact\n \n-- [Jay Patil](https://github.com/thisisjaypatil8)\n+-[Jay Patil](https://github.com/thisisjaypatil8)\n \n Project Link: [https://github.com/yourusername/gemini-scheduler](https://github.com/yourusername/gemini-scheduler)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762702020664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,7 +40,7 @@\n This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.\n \n ## Contact\n \n--[Jay Patil](https://github.com/thisisjaypatil8)\n+#  [Jay Patil](https://github.com/thisisjaypatil8)\n \n Project Link: [https://github.com/yourusername/gemini-scheduler](https://github.com/yourusername/gemini-scheduler)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762702025813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,7 +40,7 @@\n This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.\n \n ## Contact\n \n-#  [Jay Patil](https://github.com/thisisjaypatil8)\n+# De [Jay Patil](https://github.com/thisisjaypatil8)\n \n Project Link: [https://github.com/yourusername/gemini-scheduler](https://github.com/yourusername/gemini-scheduler)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762702031044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,7 +40,7 @@\n This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.\n \n ## Contact\n \n-# De [Jay Patil](https://github.com/thisisjaypatil8)\n+# Devl [Jay Patil](https://github.com/thisisjaypatil8)\n \n Project Link: [https://github.com/yourusername/gemini-scheduler](https://github.com/yourusername/gemini-scheduler)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762702036093,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,7 +40,7 @@\n This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.\n \n ## Contact\n \n-# Devl [Jay Patil](https://github.com/thisisjaypatil8)\n+# Devlo [Jay Patil](https://github.com/thisisjaypatil8)\n \n Project Link: [https://github.com/yourusername/gemini-scheduler](https://github.com/yourusername/gemini-scheduler)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762702041274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,7 +40,7 @@\n This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.\n \n ## Contact\n \n-# Devlo [Jay Patil](https://github.com/thisisjaypatil8)\n+# Devel [Jay Patil](https://github.com/thisisjaypatil8)\n \n Project Link: [https://github.com/yourusername/gemini-scheduler](https://github.com/yourusername/gemini-scheduler)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762702046375,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,7 +40,7 @@\n This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.\n \n ## Contact\n \n-# Devel [Jay Patil](https://github.com/thisisjaypatil8)\n+# Dev [Jay Patil](https://github.com/thisisjaypatil8)\n \n Project Link: [https://github.com/yourusername/gemini-scheduler](https://github.com/yourusername/gemini-scheduler)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762702051777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,7 +40,7 @@\n This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.\n \n ## Contact\n \n-# Dev [Jay Patil](https://github.com/thisisjaypatil8)\n+# Devloped b [Jay Patil](https://github.com/thisisjaypatil8)\n \n Project Link: [https://github.com/yourusername/gemini-scheduler](https://github.com/yourusername/gemini-scheduler)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762702076708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,7 +40,7 @@\n This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.\n \n ## Contact\n \n-# Devloped b [Jay Patil](https://github.com/thisisjaypatil8)\n+# Developed by  [Jay Patil](https://github.com/thisisjaypatil8)\n \n Project Link: [https://github.com/yourusername/gemini-scheduler](https://github.com/yourusername/gemini-scheduler)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762702141681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,5 +42,5 @@\n ## Contact\n \n # Developed by  [Jay Patil](https://github.com/thisisjaypatil8)\n \n-Project Link: [https://github.com/yourusername/gemini-scheduler](https://github.com/yourusername/gemini-scheduler)\n\\ No newline at end of file\n+Project Link: [https://github.com/yourusername/gemini-scheduler](https://github.com/thisisjaypatil8/Thirteen26-Task-Scheduler-)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762702160570,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,5 +42,5 @@\n ## Contact\n \n # Developed by  [Jay Patil](https://github.com/thisisjaypatil8)\n \n-Project Link: [https://github.com/yourusername/gemini-scheduler](https://github.com/thisisjaypatil8/Thirteen26-Task-Scheduler-)\n\\ No newline at end of file\n+Project Link: [https://github.com/yourusername/gemini-schedule](https://github.com/thisisjaypatil8/Thirteen26-Task-Scheduler-)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762702170458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,5 +42,5 @@\n ## Contact\n \n # Developed by  [Jay Patil](https://github.com/thisisjaypatil8)\n \n-Project Link: [https://github.com/yourusername/gemini-schedule](https://github.com/thisisjaypatil8/Thirteen26-Task-Scheduler-)\n\\ No newline at end of file\n+Project Link: [T](https://github.com/thisisjaypatil8/Thirteen26-Task-Scheduler-)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762702175794,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,5 +42,5 @@\n ## Contact\n \n # Developed by  [Jay Patil](https://github.com/thisisjaypatil8)\n \n-Project Link: [T](https://github.com/thisisjaypatil8/Thirteen26-Task-Scheduler-)\n\\ No newline at end of file\n+Project Link: [Thirteen26](https://github.com/thisisjaypatil8/Thirteen26-Task-Scheduler-)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762702184723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,5 +42,5 @@\n ## Contact\n \n # Developed by  [Jay Patil](https://github.com/thisisjaypatil8)\n \n-Project Link: [Thirteen26](https://github.com/thisisjaypatil8/Thirteen26-Task-Scheduler-)\n\\ No newline at end of file\n+#Project Link: [Thirteen26](https://github.com/thisisjaypatil8/Thirteen26-Task-Scheduler-)\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1762701131800,
