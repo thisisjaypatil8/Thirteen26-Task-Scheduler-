@@ -1,5 +1,5 @@
 // This is the correct, stable endpoint.
-const GEMINI_API_URL_BASE = "https://generativelanguage.googleapis.com/v1/models/gemini-2.5-pro:generateContent?key=";
+const GEMINI_API_URL_BASE = "https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent?key=";
 
 const FIXED_EVENTS = `
     - Sleep (10pm - 6am)
