@@ -1,5 +1,7 @@
-// This is the correct, stable endpoint.
-const GEMINI_API_URL_BASE = "https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent?key=";
+// src/services/geminiService.js
+
+// Using 1.5-Flash as it is more stable for high-volume free tier usage than 2.0
+const GEMINI_API_URL_BASE = "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=";
 
 const FIXED_EVENTS = `
     - Sleep (10pm - 6am)
@@ -50,42 +52,55 @@ export const getAISchedule = async (taskInput, apiKey, currentTime) => {
         }
     `;
 
-    const response = await fetch(GEMINI_API_URL_BASE + apiKey, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            contents: [{ parts: [{ text: prompt }] }]
-        })
-    });
+    try {
+        const response = await fetch(GEMINI_API_URL_BASE + apiKey, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                contents: [{ parts: [{ text: prompt }] }]
+            })
+        });
 
-    if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(`API Error: ${response.status} ${response.statusText} - ${errorData.error.message}`);
+        if (!response.ok) {
+            const errorData = await response.json().catch(() => ({})); // Prevent crash if error isn't JSON
+            
+            // Handle Rate Limiting (429) explicitly
+            if (response.status === 429) {
+                throw new Error("You are generating too fast! The free tier has a limit. Please wait 1 minute and try again.");
+            }
+            
+            throw new Error(`API Error: ${response.status} - ${errorData.error?.message || response.statusText}`);
+        }
+
+        const data = await response.json();
+        
+        let jsonString = data.candidates[0].content.parts[0].text;
+        jsonString = jsonString.replace(/```json/g, "").replace(/```/g, "").trim();
+
+        // Parse the new object structure
+        const responseObject = JSON.parse(jsonString);
+
+        const schedule = responseObject.schedule || [];
+        const couldNotSchedule = responseObject.couldNotSchedule || [];
+
+        // Sort schedule by start time and add a unique ID
+        schedule.sort((a, b) => a.startTime.localeCompare(b.startTime));
+        
+        const finalSchedule = schedule.map((item, index) => ({
+            ...item,
+            id: `${item.startTime}-${item.task}-${index}` // Create a stable unique ID
+        }));
+
+        // Return an object with both arrays
+        return { finalSchedule, couldNotSchedule };
+
+    } catch (error) {
+        // Pass the error up so the UI sees it
+        console.error("Schedule Generation Error:", error);
+        throw error;
     }
-
-    const data = await response.json();
-    
-    let jsonString = data.candidates[0].content.parts[0].text;
-    jsonString = jsonString.replace(/```json/g, "").replace(/```/g, "").trim();
-
-    // Parse the new object structure
-    const responseObject = JSON.parse(jsonString);
-
-    const schedule = responseObject.schedule || [];
-    const couldNotSchedule = responseObject.couldNotSchedule || [];
-
-    // Sort schedule by start time and add a unique ID
-    schedule.sort((a, b) => a.startTime.localeCompare(b.startTime));
-    
-    const finalSchedule = schedule.map((item, index) => ({
-        ...item,
-        id: `${item.startTime}-${item.task}-${index}` // Create a stable unique ID
-    }));
-
-    // Return an object with both arrays
-    return { finalSchedule, couldNotSchedule };
 };
 
 
@@ -111,13 +126,6 @@ export const getAITips = async (schedule, apiKey) => {
         -   Look for 'Free Time' blocks and suggest how to use them to recharge.
         
         You MUST reply with ONLY a valid JSON array of strings. Do not write any other text.
-        
-        Example Output:
-        [
-            "I see you have 'DSA 3 problems' scheduled. Remember to take a 5-minute break after each problem to stay fresh.",
-            "Your 'web dev lecture' is right before 'Free Time'. Great planning! Use that free time to jot down 3 key things you learned.",
-            "You have two high-priority tasks back-to-back. Make sure to stand up and stretch for 60 seconds between them."
-        ]
     `;
 
     try {
@@ -132,6 +140,10 @@ export const getAITips = async (schedule, apiKey) => {
         });
 
         if (!response.ok) {
+             if (response.status === 429) {
+                 // Return a friendly tip instead of crashing
+                return ["⚠️ You're moving too fast for the AI. Take a deep breath and try again in a minute."];
+            }
             throw new Error('Failed to fetch tips');
         }
 
@@ -143,6 +155,7 @@ export const getAITips = async (schedule, apiKey) => {
 
     } catch (error) {
         console.error("Error fetching AI tips:", error);
-        return ["Error: Could not load tips."]; // Return an error message
+        // Return an error message as a tip so the UI doesn't break
+        return ["Tip: AI service is currently unavailable. Stick to your schedule!"]; 
     }
 };
